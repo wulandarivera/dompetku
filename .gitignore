@@ -1,0 +1,106 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Environment Variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing
+coverage/
+__tests__/
+*.spec.*
+*.test.*
+
+# Production Build
+build/
+dist/
+web-build/
+
+# Debug & Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+debug.log
+*.log
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IDE - IntelliJ
+.idea/
+*.iml
+.idea_modules/
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# React Native specific
+*.jsbundle
+*.tsbuildinfo
+.expo/
+.expo-shared/
+*.p8
+*.p12
+*.mobileprovision
+*.orig.*
+
+# Android
+android/app/debug
+android/app/release
+android/build/
+android/.gradle
+android/local.properties
+android/*.keystore
+android/*.jks
+!android/debug.keystore
+.cxx/
+*.hprof
+
+# iOS
+ios/build/
+ios/Pods/
+ios/*.xcworkspace
+ios/*.xcodeproj/*
+!ios/*.xcodeproj/project.pbxproj
+!ios/*.xcodeproj/xcshareddata/
+!ios/*.xcworkspace/contents.xcworkspacedata
+**/ios/.xcode.env.local
+ios/Podfile.lock
+
+# Metro
+.metro-health-check*
+
+# Temporary files
+*.swp
+*.swo
+*~
+
+# EAS (Expo Application Services)
+.eas/
+eas.json
+
+# Cache
+.cache/
+.npm/
+.eslintcache

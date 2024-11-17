@@ -1,0 +1,472 @@
+import React from 'react';
+
+
+
+
+
+
+
+import { View, Text, StyleSheet, Dimensions } from 'react-native';
+
+
+
+
+
+
+
+import { Ionicons } from '@expo/vector-icons';
+
+
+
+
+
+
+
+import { COLORS, SIZES, FONTS, SHADOWS } from '../constants/theme';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const { width } = Dimensions.get('window');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const QuickStats = ({ expenses, savings }) => {
+
+
+
+
+
+
+
+  return (
+
+
+
+
+
+
+
+    <View style={styles.statsContainer}>
+
+
+
+
+
+
+
+      <View style={styles.statCard}>
+
+
+
+
+
+
+
+        <Ionicons name="save-outline" size={24} color={COLORS.secondary} />
+
+
+
+
+
+
+
+        <Text style={styles.statTitle}>Tabungan</Text>
+
+
+
+
+
+
+
+        <Text style={styles.statAmount}>
+
+
+
+
+
+
+
+          Rp {savings.toLocaleString('id-ID')}
+
+
+
+
+
+
+
+        </Text>
+
+
+
+
+
+
+
+      </View>
+
+
+
+
+
+
+
+      <View style={styles.statCard}>
+
+
+
+
+
+
+
+        <Ionicons name="wallet-outline" size={24} color={COLORS.primary} />
+
+
+
+
+
+
+
+        <Text style={styles.statTitle}>Pengeluaran</Text>
+
+
+
+
+
+
+
+        <Text style={styles.statAmount}>
+
+
+
+
+
+
+
+          Rp {expenses.toLocaleString('id-ID')}
+
+
+
+
+
+
+
+        </Text>
+
+
+
+
+
+
+
+      </View>
+
+
+
+
+
+
+
+    </View>
+
+
+
+
+
+
+
+  );
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const styles = StyleSheet.create({
+
+
+
+
+
+
+
+  statsContainer: {
+
+
+
+
+
+
+
+    flexDirection: 'row',
+
+
+
+
+
+
+
+    justifyContent: 'space-between',
+
+
+
+
+
+
+
+    padding: SIZES.padding,
+
+
+
+
+
+
+
+  },
+
+
+
+
+
+
+
+  statCard: {
+
+
+
+
+
+
+
+    backgroundColor: COLORS.white,
+
+
+
+
+
+
+
+    padding: SIZES.padding,
+
+
+
+
+
+
+
+    borderRadius: SIZES.radius,
+
+
+
+
+
+
+
+    width: (width - SIZES.padding * 3) / 2,
+
+
+
+
+
+
+
+    alignItems: 'center',
+
+
+
+
+
+
+
+    borderWidth: 1,
+
+
+
+
+
+
+
+    borderColor: COLORS.lightGray,
+
+
+
+
+
+
+
+  },
+
+
+
+
+
+
+
+  statTitle: {
+
+
+
+
+
+
+
+    ...FONTS.regular,
+
+
+
+
+
+
+
+    color: COLORS.gray,
+
+
+
+
+
+
+
+    marginTop: SIZES.base,
+
+
+
+
+
+
+
+    fontSize: SIZES.font,
+
+
+
+
+
+
+
+  },
+
+
+
+
+
+
+
+  statAmount: {
+
+
+
+
+
+
+
+    ...FONTS.bold,
+
+
+
+
+
+
+
+    color: COLORS.black,
+
+
+
+
+
+
+
+    marginTop: SIZES.base,
+
+
+
+
+
+
+
+    fontSize: SIZES.medium,
+
+
+
+
+
+
+
+    letterSpacing: 0.5,
+
+
+
+
+
+
+
+  },
+
+
+
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export default QuickStats; 
+
+
+
+
+
+
+
